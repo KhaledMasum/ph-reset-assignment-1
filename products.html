@@ -21,8 +21,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Load JS file -->
-    <script src="script.js"></script>
     <!-- Load css -->
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
@@ -78,12 +76,31 @@
       <section class="py-6 sm:py-8">
         <h1 class="text-4xl font-extrabold text-center mb-4">Our Products</h1>
         <div id="category-container" class="flex justify-center gap-3 mb-3">
-          <button class="btn btn-primary btn-sm">All</button>
+          <button
+            class="btn btn-primary btn-outline active btn-sm category-btn"
+            id="all-products"
+            onclick="loadAllProducts()"
+          >
+            All
+          </button>
         </div>
         <div
           class="grid sm:grid-cols-3 gap-4 m-4 sm:m-0"
           id="products-container"
         ></div>
+      </section>
+
+      <section class="py-6 sm:py-8">
+        <dialog id="product_modal" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <div id="product-details-container" class="space-y-4"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </section>
     </main>
 
@@ -197,5 +214,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Load JS file -->
+    <script src="products.js"></script>
   </body>
 </html>

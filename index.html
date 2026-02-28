@@ -21,8 +21,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Load JS file -->
-    <script src="script.js"></script>
     <!-- Load css -->
     <link rel="stylesheet" href="style.css" />
 
@@ -53,7 +51,7 @@
               tabindex="-1"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li><a>Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="products.html">Products</a></li>
               <li><a>About</a></li>
               <li><a>Contact</a></li>
@@ -63,8 +61,10 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a href="products.html">Products</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="products.html">Products</a>
+            </li>
             <li><a>About</a></li>
             <li><a>Contact</a></li>
           </ul>
@@ -85,7 +85,6 @@
           <div class="sm:col-span-12 space-y-4 p-4">
             <h1 class="text-4xl text-white font-bold">Online Shopping</h1>
             <p class="text-white">Shop smarter, save bigger every day</p>
-            <!-- <button class="btn btn-soft btn-primary mx-auto"></button> -->
 
             <div class="flex justify-center">
               <button class="btn btn-primary font-bold rounded-3xl text-base">
@@ -151,40 +150,28 @@
       </section>
 
       <!-- Trending Section -->
-      <section class="py-6 sm:py-8">
+      <section class="py-6">
         <h1 class="text-3xl font-bold mb-4 mx-4">Trending Now</h1>
         <div
           class="grid sm:grid-cols-3 gap-4 m-4 sm:m-0"
           id="tranding-container"
+        ></div>
+      </section>
+
+      <section class="py-6 sm:py-8">
+        <dialog
+          id="trending_product_modal"
+          class="modal modal-bottom sm:modal-middle"
         >
-          <!-- <div class="card bg-base-100 shadow-sm">
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="p-4">
-              <div class="flex justify-between items-center">
-                <div class="badge badge-primary">Primary</div>
-                <i class="fa-solid fa-star text-amber-600"></i>
-              </div>
-
-              <h2 class="card-title">Card Title</h2>
-              <p>
-                A card component has a figure, a body part, and inside body
-                there are title and actions parts
-              </p>
-
-              <div class="flex gap-2 mt-3">
-                <button class="btn btn-primary btn-outline btn-sm flex-1">
-                  Buy Now
-                </button>
-                <button class="btn btn-primary btn-sm flex-1">Buy Now</button>
-              </div>
+          <div class="modal-box">
+            <div id="trending-product-container" class="space-y-4"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Close</button>
+              </form>
             </div>
-          </div> -->
-        </div>
+          </div>
+        </dialog>
       </section>
     </main>
 
@@ -298,5 +285,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Load JS file -->
+    <script src="script.js"></script>
   </body>
 </html>
